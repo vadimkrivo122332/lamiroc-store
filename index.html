@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamiroc OÜ | European Outerwear & Apparel Wholesale & Retail</title>
+    <meta name="description" content="Lamiroc OÜ offers premium seasonal outerwear, jackets, and parkas for individual clients and corporate wholesale partners across Europe. In-stock, direct dispatch from EU warehouse.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0B0F19;
+            --bg-card: #131B2E;
+            --bg-light: #1E293B;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --accent: #3B82F6;
+            --accent-hover: #2563EB;
+            --border: #1E293B;
+            --border-light: #334155;
+            --nav-height: 90px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        h1, h2, h3, h4 { font-weight: 500; line-height: 1.1; color: var(--text-main); }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* Typography */
+        h1 { font-size: clamp(2.8rem, 6.5vw, 5rem); letter-spacing: -0.04em; margin-bottom: 24px; }
+        h2 { font-size: clamp(2.2rem, 4vw, 3.5rem); letter-spacing: -0.03em; margin-bottom: 24px; }
+        p { font-size: 1.125rem; font-weight: 300; color: var(--text-muted); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            background: var(--accent); color: #fff;
+            padding: 16px 36px; font-size: 1rem; font-weight: 500;
+            transition: all 0.3s ease; cursor: pointer; border: none;
+        }
+        .btn:hover { background: var(--accent-hover); box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3); }
+        
+        .btn-outline {
+            display: inline-flex; align-items: center; justify-content: center;
+            background: transparent; color: var(--text-main);
+            border: 1px solid var(--border-light); padding: 16px 36px;
+            font-size: 1rem; font-weight: 500; transition: all 0.3s ease; cursor: pointer;
+        }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            height: var(--nav-height); background: rgba(11, 15, 25, 0.9);
+            backdrop-filter: blur(12px); z-index: 100;
+            display: flex; align-items: center;
+            border-bottom: 1px solid var(--border); transition: all 0.4s ease;
+        }
+        .nav-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 0.1em; color: var(--text-main); }
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text-main); }
+
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--text-main); margin: 5px 0; }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            padding-top: var(--nav-height); position: relative; overflow: hidden;
+            background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), var(--bg-main);
+        }
+        .hero-content { max-width: 750px; position: relative; z-index: 2; }
+        .badge {
+            display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--accent);
+            padding: 6px 16px; font-size: 0.875rem; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 24px; border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        /* Sections */
+        section { padding: 120px 0; border-bottom: 1px solid var(--border); }
+
+        /* Catalog / Products */
+        .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 60px; }
+        .product-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            padding: 32px; display: flex; flex-direction: column; justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease; position: relative;
+        }
+        .product-card:hover { transform: translateY(-6px); border-color: var(--accent); }
+        .product-tag {
+            position: absolute; top: 24px; right: 24px; font-size: 0.75rem; font-weight: 600;
+            background: var(--bg-light); color: var(--text-main); padding: 4px 12px; text-transform: uppercase;
+        }
+        .product-info h3 { font-size: 1.5rem; margin-bottom: 12px; }
+        .product-info p { font-size: 0.95rem; margin-bottom: 24px; }
+        .product-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 20px; }
+        .price { font-size: 1.25rem; font-weight: 600; color: var(--text-main); }
+        .btn-sm { padding: 10px 20px; font-size: 0.875rem; background: var(--bg-light); color: var(--text-main); transition: 0.3s; }
+        .btn-sm:hover { background: var(--accent); color: #fff; }
+
+        /* B2B & B2C section */
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
+        .feature-box { background: var(--bg-card); border: 1px solid var(--border); padding: 48px; }
+        .feature-box h3 { font-size: 1.75rem; margin-bottom: 16px; }
+
+        /* Compliance / Direct Dispatch Banner */
+        .trust-banner {
+            background: var(--bg-card); border: 1px solid var(--border);
+            padding: 60px; text-align: center; margin-top: 60px;
+        }
+        .trust-banner h3 { font-size: 2rem; margin-bottom: 16px; }
+
+        /* Contact & Order Form */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
+        .contact-details { display: flex; flex-direction: column; gap: 24px; }
+        .contact-item h4 { font-size: 0.875rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px; }
+        .contact-item p { color: var(--text-main); font-size: 1.125rem; font-weight: 400; }
+
+        .form-card { background: var(--bg-card); border: 1px solid var(--border); padding: 48px; }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; font-size: 0.875rem; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+        .form-control {
+            width: 100%; background: var(--bg-main); border: 1px solid var(--border-light);
+            padding: 16px; color: var(--text-main); font-family: inherit; font-size: 1rem; transition: border-color 0.3s;
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); }
+        textarea.form-control { resize: vertical; min-height: 120px; }
+        .form-card .btn { width: 100%; }
+
+        /* Footer */
+        footer { background: #060910; padding: 60px 0; border-top: 1px solid var(--border); font-size: 0.875rem; }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+        .footer-links { display: flex; gap: 32px; }
+        .footer-links a:hover { color: var(--text-main); }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .catalog-grid, .features-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">LAMIROC<span>.</span>EU</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#catalog">Collections</a>
+                <a href="#b2b">Wholesale & B2B</a>
+                <a href="#about">About EU Stock</a>
+                <a href="#contact">Orders & Contact</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge">Official EU Warehouse • Direct Dispatch</span>
+                <h1>Premium Seasonal Outerwear for Europe</h1>
+                <p>Lamiroc OÜ designs and supplies high-durability seasonal jackets, windbreakers, and insulated parkas. Direct wholesale and retail distribution across the EU.</p>
+                <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="#catalog" class="btn">Explore Collection</a>
+                    <a href="#contact" class="btn-outline">Wholesale Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="catalog">
+        <div class="container">
+            <h2>Current Collections</h2>
+            <p>All items are stocked in our European facility and ready for direct dispatch to individual customers and corporate clients.</p>
+            
+            <div class="catalog-grid">
+                <div class="product-card">
+                    <span class="product-tag">Autumn / Spring</span>
+                    <div class="product-info">
+                        <h3>Urban Transit Parka</h3>
+                        <p>Weather-resistant professional windbreaker designed for transitional seasons. Premium multi-layer European fabrics.</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">€185.00</span>
+                        <a href="#contact" class="btn-sm">Inquire / Order</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-tag">Winter Series</span>
+                    <div class="product-info">
+                        <h3>Nordic Executive Insulated Jacket</h3>
+                        <p>Heavy thermal protection engineered for harsh winter conditions. Elegant corporate profile combined with extreme warmth.</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">€260.00</span>
+                        <a href="#contact" class="btn-sm">Inquire / Order</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <span class="product-tag">Summer Line</span>
+                    <div class="product-info">
+                        <h3>Lightweight Tech Windbreaker</h3>
+                        <p>Ultra-light breathable shell jacket optimized for active daily commutes and outdoor corporate staff uniforms.</p>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">€120.00</span>
+                        <a href="#contact" class="btn-sm">Inquire / Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="b2b" style="background: rgba(19, 27, 46, 0.4);">
+        <div class="container">
+            <h2>Retail & Wholesale Distribution</h2>
+            <p>We work flexibly with private buyers and legal corporate entities throughout Europe.</p>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3>For Businesses (B2B)</h3>
+                    <p>Corporate supply contracts, branded staff outerwear, and bulk wholesale volumes with full EU VAT invoicing and documented compliance for commercial accounts.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>For Private Buyers (B2C)</h3>
+                    <p>Direct purchase of individual items with fast courier delivery anywhere within the European Union. Standard consumer return rights applied.</p>
+                </div>
+            </div>
+
+            <div class="trust-banner">
+                <h3>In-Stock Guarantee & Direct Shipping</h3>
+                <p>Every jacket presented in our catalogue is physically stored in our Tallinn warehouse and dispatched immediately upon order confirmation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div style="max-width: 800px;">
+                <h2>European Corporate Standards</h2>
+                <p style="margin-bottom: 24px;">Lamiroc OÜ is a fully registered Estonian enterprise operating under strict EU commercial laws. Our supply chains and inventory protocols are completely transparent, ensuring seamless verification for banking partners and payment institutions.</p>
+                <p><strong>Registry Code:</strong> 17380509 &nbsp;|&nbsp; <strong>VAT Number:</strong> EE102928019<br>
+                <strong>Address:</strong> Telliskivi tn 60a/5, Tallinn, 10412, Estonia</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <h2>Direct Communication</h2>
+                    <p>Contact our sales department for retail purchases, wholesale catalogs, corporate pricing, or shipping arrangements across Europe.</p>
+                    
+                    <div class="contact-item">
+                        <h4>Dispatch Warehouse & Office</h4>
+                        <p>Telliskivi tn 60a/5, Põhja-Tallinna linnaosa<br>Tallinn, 10412, Estonia</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Direct Email</h4>
+                        <p><a href="mailto:lamirocou1@gmail.com" style="color: var(--accent);">lamirocou1@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Operating Region</h4>
+                        <p>European Union (Direct local shipping)</p>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <form action="mailto:lamirocou1@gmail.com" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name / Company</label>
+                            <input type="text" id="name" name="Name_or_Company" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="Email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Order Type</label>
+                            <select id="type" name="Inquiry_Type" class="form-control" style="background: var(--bg-main); color: var(--text-main);">
+                                <option value="Retail Purchase">Retail Purchase (B2C)</option>
+                                <option value="Wholesale / B2B">Wholesale / Corporate (B2B)</option>
+                                <option value="General Question">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Item Details</label>
+                            <textarea id="message" name="Message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-inner">
+            <div>&copy; 2026 Lamiroc OÜ. Reg: 17380509. VAT: EE102928019. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="#about">Terms & Compliance</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+    </script>
+</body>
+</html>
