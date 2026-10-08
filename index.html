@@ -652,7 +652,6 @@
       <div>
         <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Contacts</h4>
         <ul class="space-y-2 text-[11px]">
-          <li>Manager: <span class="text-slate-200">Vadim Krivonogov</span></li>
           <li>Phone: <a href="tel:+37258855076" class="text-brand-400 hover:underline">+372 5885 5076</a></li>
           <li>Email: <a href="mailto:Support@lamiroc.online" class="text-brand-400 hover:underline">Support@lamiroc.online</a></li>
         </ul>
@@ -671,10 +670,10 @@
       <div>
         <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Legal Information</h4>
         <ul class="space-y-2 text-[11px]">
-          <li><a href="#" onclick="openLegalModal('terms')" class="hover:text-brand-400">Terms of Service</a></li>
-          <li><a href="#" onclick="openLegalModal('privacy')" class="hover:text-brand-400">Privacy Policy</a></li>
-          <li><a href="#" onclick="openLegalModal('refund')" class="hover:text-brand-400">Refund Policy</a></li>
-          <li><a href="#" onclick="openLegalModal('cookies')" class="hover:text-brand-400">Cookie Policy</a></li>
+          <li><a href="terms.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400">Terms of Service</a></li>
+          <li><a href="privacy.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400">Privacy Policy</a></li>
+          <li><a href="refund.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400">Refund Policy</a></li>
+          <li><a href="cookies.html" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400">Cookie Policy</a></li>
         </ul>
       </div>
 
@@ -694,30 +693,12 @@
       <div class="space-y-2">
         <h4 class="text-sm font-bold text-white">Cookie Notice</h4>
         <p class="text-xs text-slate-400 leading-relaxed">
-          We use cookies to ensure website functionality and analytics. By clicking "Accept", you agree to our <a href="#" onclick="openLegalModal('cookies')" class="text-brand-400 underline">cookie policy</a>.
+          We use cookies to ensure website functionality and analytics. By clicking "Accept", you agree to our <a href="cookies.html" target="_blank" rel="noopener noreferrer" class="text-brand-400 underline">cookie policy</a>.
         </p>
         <div class="flex gap-2 pt-1">
           <button onclick="acceptCookies()" class="px-4 py-2 bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold text-xs rounded-lg transition-all">Accept</button>
           <button onclick="rejectCookies()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded-lg transition-all">Necessary Only</button>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- LEGAL MODAL -->
-  <div id="legal-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-    <div class="glass-panel w-full max-w-2xl rounded-2xl border border-slate-700 p-6 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[85vh]">
-      <button onclick="closeLegalModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
-        <i data-lucide="x" class="w-5 h-5"></i>
-      </button>
-
-      <h3 id="legal-modal-title" class="text-xl font-bold text-white mb-4">Document</h3>
-      <div id="legal-modal-content" class="text-xs sm:text-sm text-slate-300 space-y-3 leading-relaxed font-sans">
-        <!-- Dynamic content loaded via JS -->
-      </div>
-      
-      <div class="mt-6 pt-4 border-t border-slate-800 flex justify-end">
-        <button onclick="closeLegalModal()" class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white text-xs rounded-lg font-medium">Close</button>
       </div>
     </div>
   </div>
@@ -768,7 +749,6 @@
       <div id="swatch-success-container" class="hidden text-center py-8 space-y-4">
         <div class="w-16 h-16 bg-emerald-950 border border-emerald-500/50 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-2xl shadow-lg">✓</div>
         <h4 class="text-2xl font-bold text-white">Request Successfully Sent!</h4>
-        <p class="text-xs text-slate-300 max-w-md mx-auto">Manager Vadim Krivonogov will contact you shortly.</p>
         <button onclick="closeSwatchModal()" class="px-6 py-2 bg-slate-800 text-white text-xs rounded-lg font-medium">Close</button>
       </div>
     </div>
@@ -785,10 +765,6 @@
       <p class="text-xs text-slate-400 mb-6">Lamiroc OÜ • Tallinn Office</p>
 
       <div class="space-y-4 font-mono text-xs">
-        <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 space-y-1">
-          <div class="text-slate-400">Representative:</div>
-          <div class="text-sm font-bold text-white">Vadim Krivonogov</div>
-        </div>
         <div class="p-3 bg-slate-900 rounded-lg border border-slate-800 space-y-1">
           <div class="text-slate-400">Phone:</div>
           <a href="tel:+37258855076" class="text-sm font-bold text-brand-400 hover:underline block">+372 5885 5076</a>
@@ -823,54 +799,6 @@
     function rejectCookies() {
       localStorage.setItem('lamiroc_cookie_consent', 'rejected');
       document.getElementById('cookie-banner').classList.add('hidden');
-    }
-
-    const legalTexts = {
-      terms: {
-        title: "Terms of Service",
-        content: `
-          <p><strong>1. General Provisions</strong><br>These terms regulate the use of lamiroc.com and orders placed with <strong>Lamiroc OÜ</strong> (registration code 17380509, address: Telliskivi tn 60a/5, Tallinn, 10412, Estonia).</p>
-          <p><strong>2. Orders and Pricing</strong><br>All prices are listed in Euros (€). For EU corporate clients with a valid VAT number, a 0% rate applies (Reverse Charge). For private consumers, standard Estonian VAT (22%) is applied.</p>
-          <p><strong>3. Made-to-Order Production</strong><br>Since each garment is produced according to custom specifications (selected color, size, logo branding), production begins after design layout approval and deposit/payment confirmation.</p>
-          <p><strong>4. Intellectual Property</strong><br>All materials, texts, 3D configurator, and graphical elements on this website are the property of Lamiroc OÜ.</p>
-        `
-      },
-      privacy: {
-        title: "Privacy Policy",
-        content: `
-          <p><strong>1. Data Collection</strong><br>Lamiroc OÜ collects personal data (name, phone, email, delivery address) voluntarily provided during order checkout, quote requests, or fabric swatch requests.</p>
-          <p><strong>2. Purpose of Processing</strong><br>Data is used exclusively to fulfill your orders, manage communication with manager Vadim Krivonogov, issue invoices, and handle logistics.</p>
-          <p><strong>3. Data Protection (GDPR)</strong><br>We comply with strict EU privacy standards. Your data is never shared with third parties, except courier delivery services and Estonian tax authorities as required by law.</p>
-        `
-      },
-      refund: {
-        title: "Refund & Exchange Policy",
-        content: `
-          <p><strong>1. Custom-Made Garments</strong><br>In accordance with EU consumer protection regulations, items manufactured to custom specifications (personalized tailoring, branded embroidery, custom sizing) are not eligible for standard returns once production has begun.</p>
-          <p><strong>2. Defects & Non-Conformity</strong><br>In case of manufacturing defects or discrepancies with the approved specification, please contact us within 14 days of receipt via email at Support@lamiroc.online or phone +372 5885 5076. We will arrange a replacement or defect correction at our expense.</p>
-          <p><strong>3. Swatch Kits</strong><br>Fabric swatch kits remain yours to keep for evaluation.</p>
-        `
-      },
-      cookies: {
-        title: "Cookie Policy",
-        content: `
-          <p><strong>1. What Are Cookies?</strong><br>Cookies are small text files stored on your device when visiting a website.</p>
-          <p><strong>2. Cookies Used</strong><br>We use essential technical cookies for UI operation (including the 3D configurator and sound settings), as well as analytical cookies to evaluate website usability.</p>
-          <p><strong>3. Cookie Management</strong><br>You can change or disable cookie settings in your browser at any time.</p>
-        `
-      }
-    };
-
-    function openLegalModal(type) {
-      playClickSound(450);
-      const data = legalTexts[type];
-      if (!data) return;
-      document.getElementById('legal-modal-title').textContent = data.title;
-      document.getElementById('legal-modal-content').innerHTML = data.content;
-      document.getElementById('legal-modal').classList.remove('hidden');
-    }
-    function closeLegalModal() {
-      document.getElementById('legal-modal').classList.add('hidden');
     }
 
     function toggleMobileMenu() {
@@ -954,172 +882,4 @@
           drop.className = 'rain-drop';
           drop.style.left = Math.random() * 100 + '%';
           drop.style.animationDelay = Math.random() * 0.8 + 's';
-          drop.style.animationDuration = (0.4 + Math.random() * 0.4) + 's';
-          overlay.appendChild(drop);
-        }
-      } else if (mode === 'snow') {
-        btnSnow.className = 'px-2.5 py-1 rounded bg-teal-400 text-slate-950 font-bold transition-all';
-        for (let i = 0; i < 40; i++) {
-          const flake = document.createElement('div');
-          flake.className = 'snow-flake';
-          flake.style.left = Math.random() * 100 + '%';
-          flake.style.animationDelay = Math.random() * 1.5 + 's';
-          flake.style.animationDuration = (1.2 + Math.random() * 1.2) + 's';
-          overlay.appendChild(flake);
-        }
-      } else if (mode === 'wind') {
-        btnWind.className = 'px-2.5 py-1 rounded bg-amber-500 text-slate-950 font-bold transition-all';
-        for (let i = 0; i < 20; i++) {
-          const windLine = document.createElement('div');
-          windLine.className = 'absolute bg-gradient-to-r from-transparent via-amber-400/40 to-transparent h-[1px]';
-          windLine.style.width = (40 + Math.random() * 80) + 'px';
-          windLine.style.top = (Math.random() * 100) + '%';
-          windLine.style.left = '-50px';
-          windLine.style.animation = `fallRain ${0.8 + Math.random() * 0.6}s linear infinite`;
-          overlay.appendChild(windLine);
-        }
-      }
-    }
-
-    function setJacketColor(key, name, fillValue) {
-      playClickSound(600);
-      configState.colorKey = key;
-      configState.colorName = name;
-      configState.colorFill = fillValue;
-      document.getElementById('selected-color-name').textContent = name;
-      document.getElementById('hud-color').textContent = name;
-      document.getElementById('jacket-body').setAttribute('fill', fillValue);
-    }
-
-    function updateFabricMaterial(fabricKey) {
-      playClickSound(480);
-      configState.fabric = fabricKey;
-      const overlayEl = document.getElementById('jacket-texture-overlay');
-      const descEl = document.getElementById('fabric-description');
-      const hudEl = document.getElementById('hud-fabric');
-
-      if (fabricKey === 'storm-3l') {
-        overlayEl.setAttribute('fill', 'url(#ripstopPattern)');
-        overlayEl.setAttribute('opacity', '0.5');
-        descEl.textContent = 'Membrane material: provides precipitation and wind protection. Exact metrics depend on the chosen fabric batch.';
-        hudEl.textContent = 'Membrane Fabric';
-      } else if (fabricKey === 'heavy-ripstop') {
-        overlayEl.setAttribute('fill', 'url(#ripstopPattern)');
-        overlayEl.setAttribute('opacity', '0.85');
-        descEl.textContent = 'Heavy-Duty Ripstop: enhanced tear strength due to reinforced weave structure.';
-        hudEl.textContent = 'Heavy-Duty Ripstop';
-      } else if (fabricKey === 'softshell') {
-        overlayEl.setAttribute('fill', 'url(#softshellPattern)');
-        overlayEl.setAttribute('opacity', '0.7');
-        descEl.textContent = 'Softshell: elastic material with a fleece insulating layer for enhanced comfort.';
-        hudEl.textContent = 'Softshell';
-      } else if (fabricKey === 'windstop') {
-        overlayEl.setAttribute('fill', 'none');
-        descEl.textContent = 'Windstop: minimal weight and reliable protection against wind chill.';
-        hudEl.textContent = 'Lightweight Windstop';
-      }
-    }
-
-    function toggleReflectives(enabled) {
-      playClickSound(700);
-      configState.reflectives = enabled;
-      const refGroup = document.getElementById('reflective-3m-group');
-      const hudRef = document.getElementById('hud-reflective');
-
-      if (enabled) {
-        refGroup.classList.remove('opacity-0');
-        refGroup.classList.add('opacity-100');
-        hudRef.textContent = 'ON';
-        hudRef.className = 'text-emerald-400 font-bold';
-      } else {
-        refGroup.classList.remove('opacity-100');
-        refGroup.classList.add('opacity-0');
-        hudRef.textContent = 'OFF';
-        hudRef.className = 'text-slate-500 font-normal';
-      }
-    }
-
-    function updateEmbroideryText(val) {
-      configState.logoText = val.toUpperCase().trim();
-      const renderEl = document.getElementById('embroidery-text-render');
-      const bgEl = document.getElementById('embroidery-bg');
-      const hudEmb = document.getElementById('hud-embro');
-
-      if (!val) {
-        renderEl.textContent = 'LOGO';
-        hudEmb.textContent = 'None';
-      } else {
-        renderEl.textContent = configState.logoText;
-        hudEmb.textContent = configState.logoText;
-      }
-      bgEl.setAttribute('width', Math.max(30, renderEl.textContent.length * 7.2));
-    }
-
-    function updateEmbroideryPosition(pos) {
-      playClickSound(550);
-      configState.logoPosition = pos;
-      const embroGroup = document.getElementById('custom-embroidery-group');
-      if (pos === 'chest') embroGroup.setAttribute('transform', 'translate(185, 185)');
-      else if (pos === 'sleeve') embroGroup.setAttribute('transform', 'translate(370, 180)');
-      else if (pos === 'back') embroGroup.setAttribute('transform', 'translate(225, 230)');
-      else if (pos === 'hood') embroGroup.setAttribute('transform', 'translate(225, 55)');
-    }
-
-    function updateEmbroiderySize(size) {
-      document.getElementById('embroidery-text-render').setAttribute('font-size', size);
-    }
-
-    function runCalculator() {
-      const qty = parseInt(document.getElementById('calc-qty').value) || 1;
-      const buyerType = document.getElementById('calc-buyer-type').value;
-
-      let basePrice = qty >= 20 ? 175 : (qty >= 5 ? 185 : 210);
-      let vatRate = 0;
-
-      if (buyerType === 'company-eu') {
-        vatRate = 0;
-      } else if (buyerType === 'private-eu') {
-        vatRate = 0.22;
-      } else {
-        vatRate = 0;
-      }
-
-      const subtotal = basePrice * qty;
-      const vatAmount = subtotal * vatRate;
-      const total = subtotal + vatAmount;
-
-      document.getElementById('calc-unit-price').textContent = '€' + basePrice.toFixed(2);
-      document.getElementById('calc-vat-amount').textContent = '€' + vatAmount.toFixed(2) + ' (' + (vatRate * 100) + '%)';
-      document.getElementById('calc-total-price').textContent = '€' + total.toFixed(2);
-    }
-
-    function openSwatchModal() {
-      playClickSound(500);
-      document.getElementById('swatch-modal').classList.remove('hidden');
-      document.getElementById('swatch-form-container').classList.remove('hidden');
-      document.getElementById('swatch-success-container').classList.add('hidden');
-    }
-    function closeSwatchModal() {
-      document.getElementById('swatch-modal').classList.add('hidden');
-    }
-    function handleSwatchSubmit(e) {
-      e.preventDefault();
-      playClickSound(800);
-      document.getElementById('swatch-form-container').classList.add('hidden');
-      document.getElementById('swatch-success-container').classList.remove('hidden');
-    }
-
-    function openContactModal() {
-      playClickSound(500);
-      document.getElementById('contact-modal').classList.remove('hidden');
-    }
-    function closeContactModal() {
-      document.getElementById('contact-modal').classList.add('hidden');
-    }
-    function submitConfigurationOrder() {
-      openContactModal();
-    }
-  </script>
-
-</body>
-</html>
+          drop.style.animationDuration = (0.4 + Math.random() *
