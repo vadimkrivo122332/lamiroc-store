@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Returns & Refunds Policy | Lamiroc OÜ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#070a0e] text-slate-200 font-sans p-6 sm:p-12">
+  <div class="max-w-3xl mx-auto bg-[#0f1724] border border-slate-800 rounded-2xl p-8 shadow-2xl">
+    <a href="index.html" class="text-teal-400 text-xs font-mono hover:underline mb-6 inline-block">&larr; Back to Lamiroc.com</a>
+    <h1 class="text-2xl font-bold text-white mb-6">Returns & Refunds Policy</h1>
+    
+    <div class="text-sm text-slate-300 space-y-6 leading-relaxed font-sans">
+      <p class="text-slate-400 border-l-2 border-teal-400 pl-3 italic">
+        Clear arrangements for changing your mind, reporting a fault, and receiving a refund. Mandatory statutory consumer rights under EU law are not reduced by this policy.
+      </p>
+
+      <div>
+        <h2 class="text-base font-bold text-white mb-2">1. Consumer Change-of-Mind Returns (Right of Withdrawal)</h2>
+        <p>For standard distance purchases made by EU consumers, you have the right to cancel and return your order without giving any reason within <strong>14 days</strong> after receiving the goods. For an order delivered in separate lots, the withdrawal period starts on the day the last item is received.</p>
+        <p class="mt-2">To exercise your right, notify us clearly by email at <a href="mailto:Support@lamiroc.online" class="text-teal-400 hover:underline">Support@lamiroc.online</a> or by post to <strong>Lamiroc OÜ, Telliskivi tn 60a/5, Tallinn, 10412, Estonia</strong>. You must then return the goods within 14 days after giving your notice. Contacting us for instructions does not shorten these deadlines or make cancellation conditional on approval.</p>
+      </div>
+
+      <div>
+        <h2 class="text-base font-bold text-white mb-2">2. Condition of Goods & Return Costs</h2>
+        <p>You may inspect and try on garments as you reasonably would in a physical retail shop to test size, fit, and characteristics. Please retain original tags, accessories, and packaging where possible; however, the absence of original packaging alone does not remove your statutory consumer rights.</p>
+        <p class="mt-2">For a change-of-mind return, the buyer pays the direct cost of returning the goods. We may make a lawful deduction from the refund for any reduced value of the goods caused by handling beyond what is necessary to establish the nature, characteristics, and functioning of the garments. No general restocking fee applies to statutory consumer cancellations.</p>
+      </div>
+
+      <div>
+        <h2 class="text-base font-bold text-white mb-2">3. Refund Timeline & Process</h2>
+        <p>For a valid consumer cancellation, we refund all payments received from you, including the costs of our least expensive standard outbound delivery for the cancelled order. Upgrades to premium or express delivery will not be refunded.</p>
+        <p class="mt-2">We may withhold the refund until we receive the returned goods back or until you supply evidence of having sent back the goods, whichever occurs first. Refunds are processed without undue delay and within 14 days of that point, using the original payment method unless another method is expressly agreed upon, with no additional refund fees.</p>
+      </div>
+
+      <div>
+        <h2 class="text-base font-bold text-white mb-2">4. Faulty, Damaged, or Misdescribed Garments (Legal Guarantee)</h2>
+        <p>Under mandatory EU consumer protection laws, all goods benefit from a legal guarantee of conformity lasting a minimum of <strong>two years</strong> from delivery. Contact <a href="mailto:Support@lamiroc.online" class="text-teal-400 hover:underline">Support@lamiroc.online</a> immediately if garments delivered are faulty, incorrect, or unfit for purpose.</p>
+        <p class="mt-2">If a manufacturing defect or non-conformity is confirmed, you are entitled to a repair or replacement free of charge, or a price reduction/refund as provided by applicable legal rules. We will pay or reimburse reasonable return shipping costs for valid faulty-goods remedies.</p>
+      </div>
+
+      <div>
+        <h2 class="text-base font-bold text-white mb-2">5. Exceptions to Right of Withdrawal</h2>
+        <p>In accordance with EU consumer rules, the statutory 14-day right of withdrawal does not apply to garments made to your specific individual specifications or clearly personalized items (e.g. custom corporate logo embroidery, individualized text printing, or non-standard custom tailoring specifically created for your order).</p>
+        <p class="mt-2">Standard outerwear, non-personalized parkas, and regular size items remain fully eligible for standard 14-day returns. Statutory rights for faulty or defective goods apply to all items without exception.</p>
+      </div>
+
+      <div>
+        <h2 class="text-base font-bold text-white mb-2">6. Commercial & Business Purchases (B2B)</h2>
+        <p>Business clients (purchasing with a corporate VAT number or under commercial agreement) do not automatically possess the statutory 14-day consumer withdrawal right. Commercial returns and cancellation terms are specified in the written offer or commercial agreement. This does not excuse breach of contract, misdescription, or manufacturing defects.</p>
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 mt-6">
+        <h2 class="text-base font-bold text-white mb-2">Optional Cancellation Form</h2>
+        <p class="text-xs text-slate-400 mb-3">(Complete and return this form only if you wish to withdraw from the contract)</p>
+        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 font-mono text-xs space-y-2 text-slate-300">
+          <p><strong>To:</strong> Lamiroc OÜ, Telliskivi tn 60a/5, Tallinn, 10412, Estonia | Support@lamiroc.online</p>
+          <p>I hereby give notice that I cancel my contract of sale for the following goods: [Insert description / Order Number]</p>
+          <p>Ordered on / Received on: [Dates]</p>
+          <p>Customer Name: [Name]</p>
+          <p>Customer Address: [Address]</p>
+          <p>Date: [Date]</p>
+          <p class="text-[10px] text-slate-500 italic">* Signature required only if this form is notified on paper.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
